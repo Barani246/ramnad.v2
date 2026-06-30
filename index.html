@@ -3,153 +3,66 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ramnad Site Management v1.0</title>
+    <title>Ramnad Site Management</title>
 
-<link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-<!-- Leaflet -->
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
-<!-- Awesome Icons -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!-- Sidebar -->
-<!-- ========================= -->
+    <div class="container">
 
-<div id="sidebar">
+        <!-- Sidebar -->
+        <div id="sidebar">
 
-<div class="sidebar-header">
+            <div class="top">
 
-<div class="logo">
+                <button id="toggleBtn">☰</button>
 
-<i class="fa-solid fa-location-dot"></i>
+                <h2>Ramnad Sites</h2>
 
-<div>
+            </div>
 
-<h2>Ramnad Sites</h2>
+            <div class="search-container">
 
-<p>Site Management v1.0</p>
+                <input
+                    type="text"
+                    id="searchBox"
+                    placeholder="Search by Site Name or Number">
 
-</div>
+            </div>
 
-</div>
+            <ul id="siteList"></ul>
 
-<button id="closeSidebar">
+        </div>
 
-<i class="fa-solid fa-xmark"></i>
+        <!-- Map -->
+        <div id="map"></div>
+        <button id="locateBtn">🎯</button>
 
-</button>
+    <button id="locateBtn" title="My Location">
+      🎯
+    </button>
 
-</div>
+        <button id="showSidebar">☰</button>
 
+    </div>
 
-<!-- Search -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<div class="search-container">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search Site / Village">
-
-<i class="fa-solid fa-magnifying-glass"></i>
-
-</div>
-
-<!-- Site Count -->
-
-<div id="siteCount">
-
-Loading Sites...
-
-</div>
-
-<!-- Site List -->
-
-<div id="siteList">
-
-</div>
-
-</div>
-
-
-
-<!-- ========================= -->
-<!-- Map -->
-<!-- ========================= -->
-
-<div id="map"></div>
-
-<!-- Sidebar Open -->
-
-<button id="menuButton">
-
-<i class="fa-solid fa-bars"></i>
-
-</button>
-
-<!-- Floating Buttons -->
-
-<div id="floatingButtons">
-
-<button id="locateBtn">
-
-<i class="fa-solid fa-location-crosshairs"></i>
-
-</button>
-
-<button id="measureBtn">
-
-<i class="fa-solid fa-ruler"></i>
-
-</button>
-
-<button id="resetBtn">
-
-<i class="fa-solid fa-rotate-left"></i>
-
-</button>
-
-</div>
-
-<!-- Bottom Info Card -->
-
-<div id="infoCard">
-
-<div id="infoTitle">
-
-Select a Site
-
-</div>
-
-<div id="infoBody">
-
-Click any marker to view details.
-
-</div>
-
-</div>
-
-<!-- Leaflet -->
-
-<script
-src="https://unpkg.com/leaflet/dist/leaflet.js">
-</script>
-
-<script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 
-</html>
+</html> 
