@@ -1,940 +1,398 @@
-/* =====================================================
-   RAMNAD SITE MANAGEMENT v1.0
-   STYLE.CSS (PART 1)
-===================================================== */
-
-/* ------------------------
-   GOOGLE FONT
--------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ------------------------
-   RESET
--------------------------*/
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-html,
 body{
-    width:100%;
-    height:100%;
     overflow:hidden;
-    font-family:'Poppins',sans-serif;
-    background:#f5f7fa;
+    background:#f5f5f5;
 }
 
-/* ------------------------
-   MAP
--------------------------*/
+.container{
+    display:flex;
+    width:100vw;
+    height:100vh;
+}
+
+/* Sidebar */
+
+#sidebar{
+    width:320px;
+    background:#ffffff;
+    border-right:1px solid #ddd;
+    display:flex;
+    flex-direction:column;
+    transition:0.35s;
+    overflow:hidden;
+}
+
+#sidebar.hide{
+    width:0;
+}
+
+.top{
+    background:#1565C0;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:15px;
+}
+
+.top h2{
+    font-size:22px;
+    font-weight:bold;
+}
+
+#toggleBtn{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:8px;
+
+    background:white;
+    color:#1565C0;
+
+    font-size:22px;
+    cursor:pointer;
+}
+
+#toggleBtn:hover{
+
+    background:#E3F2FD;
+
+}
+
+#searchBox{
+
+    margin:15px;
+    padding:12px;
+
+    border-radius:8px;
+    border:1px solid #ccc;
+
+    font-size:16px;
+    outline:none;
+}
+
+#searchBox:focus{
+
+    border:1px solid #1565C0;
+
+}
+
+#siteList{
+
+    list-style:none;
+    overflow-y:auto;
+    flex:1;
+
+}
+
+#siteList li{
+
+    padding:14px 18px;
+
+    cursor:pointer;
+
+    border-bottom:1px solid #eeeeee;
+
+    transition:0.25s;
+
+}
+
+#siteList li:hover{
+
+    background:#E3F2FD;
+
+}
+
+.siteNo{
+
+    display:inline-block;
+
+    width:32px;
+
+    text-align:center;
+
+    background:#1565C0;
+
+    color:white;
+
+    border-radius:20px;
+
+    margin-right:10px;
+
+    font-size:13px;
+
+    padding:4px;
+
+}
+
+/* Map */
 
 #map{
-    position:absolute;
-    inset:0;
-    z-index:1;
+
+    flex:1;
+
+    height:100vh;
+
 }
 
-/* ------------------------
-   SIDEBAR
--------------------------*/
+/* Floating Button */
+
+#openSidebar{
+
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:9999;
+
+}
+
+#sidebar.hide + #map + #openSidebar{
+
+    display:block;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
 
 #sidebar{
 
     position:absolute;
 
-    top:0;
-    left:0;
+    z-index:1000;
 
-    width:360px;
     height:100%;
 
-    background:#ffffff;
-
-    z-index:1200;
-
-    display:flex;
-    flex-direction:column;
-
-    box-shadow:
-    4px 0 20px rgba(0,0,0,.12);
-
-    transition:.35s ease;
-
-    overflow:hidden;
+    box-shadow:2px 0 10px rgba(0,0,0,.3);
 
 }
 
-#sidebar.closed{
+#sidebar.hide{
 
     transform:translateX(-100%);
+    width:320px;
 
 }
 
-/* ------------------------
-   HEADER
--------------------------*/
-
-.sidebar-header{
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    padding:18px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
 }
+/* ===========================
+   Show Sidebar Button
+=========================== */
 
-.logo{
+#showSidebar{
 
-    display:flex;
+    position:absolute;
 
-    align-items:center;
+    top:15px;
+    left:15px;
 
-    gap:14px;
-
-}
-
-.logo i{
-
-    font-size:34px;
-
-}
-
-.logo h2{
-
-    font-size:20px;
-
-    font-weight:600;
-
-}
-
-.logo p{
-
-    font-size:13px;
-
-    opacity:.85;
-
-}
-
-#closeSidebar{
+    width:45px;
+    height:45px;
 
     border:none;
 
-    background:rgba(255,255,255,.15);
-
-    color:#fff;
-
-    width:42px;
-
-    height:42px;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-}
-
-#closeSidebar:hover{
+    border-radius:10px;
 
     background:white;
 
-    color:#0d6efd;
+    color:#1565C0;
 
-}
-
-/* ------------------------
-   SEARCH
--------------------------*/
-
-.search-container{
-
-    padding:16px;
-
-    position:relative;
-
-    background:#fff;
-
-}
-
-.search-container input{
-
-    width:100%;
-
-    border:none;
-
-    outline:none;
-
-    background:#eef2f7;
-
-    padding:14px 50px 14px 18px;
-
-    border-radius:14px;
-
-    font-size:15px;
-
-    transition:.3s;
-
-}
-
-.search-container input:focus{
-
-    background:#fff;
-
-    box-shadow:
-
-    0 0 0 2px #0d6efd;
-
-}
-
-.search-container i{
-
-    position:absolute;
-
-    right:32px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    color:#666;
-
-}
-
-/* ------------------------
-SITE COUNT
--------------------------*/
-
-#siteCount{
-
-    padding:10px 18px;
-
-    font-size:14px;
-
-    color:#666;
-
-    background:#f8f9fb;
-
-    border-bottom:1px solid #ececec;
-
-}
-
-/* ------------------------
-SITE LIST
--------------------------*/
-
-#siteList{
-
-    flex:1;
-
-    overflow-y:auto;
-
-    overflow-x:hidden;
-
-    background:#fafafa;
-
-}
-
-/* Scrollbar */
-
-#siteList::-webkit-scrollbar{
-
-    width:7px;
-
-}
-
-#siteList::-webkit-scrollbar-thumb{
-
-    background:#b9c4d0;
-
-    border-radius:20px;
-
-}
-
-#siteList::-webkit-scrollbar-track{
-
-    background:#f2f2f2;
-
-}
-
-/* ------------------------
-SITE CARD
--------------------------*/
-
-.site-card{
-
-    display:flex;
-
-    gap:14px;
-
-    padding:15px;
-
-    margin:10px;
-
-    border-radius:14px;
-
-    background:#fff;
+    font-size:22px;
 
     cursor:pointer;
 
-    transition:.25s;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
 
-    border:1px solid transparent;
+    z-index:2000;
 
-    align-items:flex-start;
-
-}
-
-.site-card:hover{
-
-    transform:translateY(-2px);
-
-    border-color:#0d6efd;
-
-    box-shadow:
-
-    0 10px 18px rgba(0,0,0,.08);
+    display:none;
 
 }
 
-.site-number{
+/* Show button only when sidebar is hidden */
 
-    min-width:46px;
+#sidebar.hide ~ #showSidebar{
 
-    height:46px;
-
-    border-radius:50%;
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-weight:600;
-
-    font-size:17px;
+    display:block;
 
 }
-
-.site-content{
-
-    flex:1;
-
-}
-
-.site-name{
-
-    font-size:16px;
-
-    font-weight:600;
-
-    color:#222;
-
-    margin-bottom:5px;
-
-}
-
-.site-village{
-
-    color:#777;
-
-    font-size:14px;
-
-}
-
-.site-card.active{
-
-    background:#eaf3ff;
-
-    border-color:#0d6efd;
-
-}
-
-/* ------------------------
-MENU BUTTON
--------------------------*/
-
-#menuButton{
-
-    position:absolute;
-
-    top:18px;
-
-    left:18px;
-
-    z-index:1500;
-
-    width:48px;
-
-    height:48px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#fff;
-
-    cursor:pointer;
-
-    box-shadow:
-
-    0 6px 16px rgba(0,0,0,.18);
-
-    transition:.25s;
-
-}
-
-#menuButton:hover{
-
-    transform:scale(1.05);
-
-}
-
-/* ------------------------
-FLOATING BUTTONS
--------------------------*/
-
-#floatingButtons{
-
-    position:absolute;
-
-    right:18px;
-
-    bottom:120px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
-
-    z-index:1500;
-
-}
-
-#floatingButtons button{
-
-    width:54px;
-
-    height:54px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#fff;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-    box-shadow:
-
-    0 6px 18px rgba(0,0,0,.18);
-
-    transition:.25s;
-
-}
-
-#floatingButtons button:hover{
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    transform:translateY(-2px);
-
-}
-
-/* ------------------------
-BOTTOM INFO CARD
--------------------------*/
-
-#infoCard{
-
-    position:absolute;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    bottom:18px;
-
-    width:420px;
-
-    max-width:92%;
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:18px;
-
-    box-shadow:
-
-    0 12px 26px rgba(0,0,0,.18);
-
-    z-index:1400;
-
-}
-
-#infoTitle{
-
-    font-size:18px;
-
-    font-weight:600;
-
-    color:#222;
-
-    margin-bottom:6px;
-
-}
-
-#infoBody{
-
-    font-size:14px;
-
-    color:#666;
-
-    line-height:1.6;
-
-}
-/* =====================================================
-   RAMNAD SITE MANAGEMENT v1.0
-   STYLE.CSS (PART 2 - COMPLETE)
-===================================================== */
-
-/* ------------------------
-   LEAFLET POPUP
--------------------------*/
-
-.leaflet-popup-content-wrapper{
-    border-radius:16px;
-    padding:4px;
-    box-shadow:0 10px 25px rgba(0,0,0,.18);
-}
-
-.leaflet-popup-content{
-    margin:14px;
-    font-family:'Poppins',sans-serif;
-}
-
-.leaflet-popup-content h3{
-    font-size:17px;
-    margin-bottom:10px;
-    color:#0d6efd;
-}
-
-.leaflet-popup-content p{
-    margin:6px 0;
-    font-size:14px;
-    color:#555;
-}
-
-.leaflet-popup-tip{
-    background:#fff;
-}
-
-/* ------------------------
-   CUSTOM MARKER
--------------------------*/
+/* ===========================
+   Number Marker
+=========================== */
 
 .custom-marker{
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    background:#0d6efd;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:600;
-    font-size:14px;
-    border:3px solid #fff;
-    box-shadow:0 6px 12px rgba(0,0,0,.25);
-    transition:.25s;
-}
-
-.custom-marker:hover{
-    transform:scale(1.15);
-}
-
-.marker-selected{
-    background:#ff5722;
-    animation:pulseMarker 1.5s infinite;
-}
-
-@keyframes pulseMarker{
-    0%{
-        transform:scale(1);
-        box-shadow:0 0 0 0 rgba(255,87,34,.6);
-    }
-
-    70%{
-        transform:scale(1.1);
-        box-shadow:0 0 0 14px rgba(255,87,34,0);
-    }
-
-    100%{
-        transform:scale(1);
-    }
-}
-
-/* ------------------------
-   LOADING
--------------------------*/
-
-.loading{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
-    color:#666;
-    font-size:15px;
-}
-
-.spinner{
-    width:28px;
-    height:28px;
-    border:4px solid #ddd;
-    border-top-color:#0d6efd;
-    border-radius:50%;
-    animation:spin .8s linear infinite;
-    margin-right:12px;
-}
-
-@keyframes spin{
-    to{
-        transform:rotate(360deg);
-    }
-}
-
-/* ------------------------
-   BUTTON ACTIVE
--------------------------*/
-
-button.active{
-    background:#0d6efd !important;
-    color:#fff !important;
-}
-
-/* ------------------------
-   SEARCH HIGHLIGHT
--------------------------*/
-
-.highlight{
-    background:#fff3cd;
-}
-
-/* ------------------------
-   FADE ANIMATION
--------------------------*/
-
-.fade-in{
-    animation:fadeIn .35s ease;
-}
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-        transform:translateY(8px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ------------------------
-   ZOOM ANIMATION
--------------------------*/
-
-.zoom-in{
-    animation:zoomIn .3s ease;
-}
-
-@keyframes zoomIn{
-
-    from{
-
-        transform:scale(.8);
-        opacity:0;
-
-    }
-
-    to{
-
-        transform:scale(1);
-        opacity:1;
-
-    }
-
-}
-
-/* ------------------------
-   CARD HOVER
--------------------------*/
-
-.site-card:active{
-    transform:scale(.98);
-}
-
-/* ------------------------
-   INPUT PLACEHOLDER
--------------------------*/
-
-input::placeholder{
-    color:#999;
-}
-
-/* ------------------------
-   LEAFLET CONTROLS
--------------------------*/
-
-.leaflet-control-zoom{
-    border:none !important;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.leaflet-control-zoom a{
-    width:34px !important;
-    height:34px !important;
-    line-height:34px !important;
-    font-size:18px !important;
-}
-
-/* ------------------------
-   ROUTE BUTTON STYLE
--------------------------*/
-
-.route-btn{
-    margin-top:12px;
-    width:100%;
-    padding:10px;
+    background:transparent;
     border:none;
-    border-radius:10px;
-    background:#0d6efd;
-    color:#fff;
+}
+
+.marker-number{
+
+    width:32px;
+    height:32px;
+
+    background:#d32f2f;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    border:2px solid white;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.4);
+
+}
+/* ===========================
+   Google Maps Style Pin
+=========================== */
+
+.custom-pin{
+    background:transparent;
+    border:none;
+}
+
+.pin{
+
+    width:24px;
+    height:24px;
+
+    background:#d32f2f;
+
+    border-radius:50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    border:2px solid white;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.35);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.pin span{
+
+    transform:rotate(45deg);
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:12px;
+
+}
+/* ===========================
+   My Location Button
+=========================== */
+
+#locateBtn{
+
+    position:absolute;
+
+    bottom:90px;
+
+    right:12px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
     cursor:pointer;
-    font-size:14px;
+
+    font-size:22px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+
+    z-index:9999;
+
     transition:.25s;
-}
-
-.route-btn:hover{
-    background:#0a58ca;
-}
-
-/* ------------------------
-   MEASURE MODE
--------------------------*/
-
-.measure-active{
-    cursor:crosshair !important;
-}
-
-/* ------------------------
-   RESPONSIVE
--------------------------*/
-
-@media(max-width:991px){
-
-    #sidebar{
-
-        width:320px;
-
-    }
-
-    #infoCard{
-
-        width:92%;
-
-    }
 
 }
 
-/* ------------------------
-   MOBILE
--------------------------*/
+#locateBtn:hover{
 
-@media(max-width:768px){
+    transform:scale(1.08);
 
-    #sidebar{
+    background:#E3F2FD;
 
-        width:100%;
+}
+#locateBtn{
 
-    }
+position:absolute;
 
-    #menuButton{
+bottom:80px;
 
-        top:15px;
-        left:15px;
+right:12px;
 
-    }
+width:50px;
 
-    #floatingButtons{
+height:50px;
 
-        right:14px;
-        bottom:110px;
+border:none;
 
-    }
+border-radius:50%;
 
-    #floatingButtons button{
+background:white;
 
-        width:50px;
-        height:50px;
+font-size:22px;
 
-    }
+cursor:pointer;
 
-    .site-card{
+box-shadow:0 4px 10px rgba(0,0,0,.3);
 
-        margin:8px;
+z-index:9999;
 
-    }
-
-    .site-number{
-
-        width:42px;
-        height:42px;
-        min-width:42px;
-
-        font-size:15px;
-
-    }
-
-    #infoCard{
-
-        bottom:10px;
-        border-radius:16px;
-
-    }
+transition:.3s;
 
 }
 
-/* ------------------------
-   SMALL MOBILE
--------------------------*/
+#locateBtn:hover{
 
-@media(max-width:480px){
-
-    .logo h2{
-
-        font-size:18px;
-
-    }
-
-    .logo p{
-
-        font-size:12px;
-
-    }
-
-    .search-container{
-
-        padding:12px;
-
-    }
-
-    .search-container input{
-
-        font-size:14px;
-
-    }
-
-    .site-name{
-
-        font-size:15px;
-
-    }
-
-    .site-village{
-
-        font-size:13px;
-
-    }
-
-    #infoTitle{
-
-        font-size:16px;
-
-    }
-
-    #infoBody{
-
-        font-size:13px;
-
-    }
+transform:scale(1.1);
 
 }
-
-/* ------------------------
-   DESKTOP LARGE
--------------------------*/
-
-@media(min-width:1400px){
-
-    #sidebar{
-
-        width:390px;
-
-    }
-
-}
-
-/* ------------------------
-   UTILITIES
--------------------------*/
-
-.hidden{
-    display:none !important;
-}
-
-.text-center{
-    text-align:center;
-}
-
-.mt-10{
-    margin-top:10px;
-}
-
-.mt-15{
-    margin-top:15px;
-}
-
-.mb-10{
-    margin-bottom:10px;
-}
-
-.w-100{
-    width:100%;
-}
-
-.shadow{
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
-
-.rounded{
-    border-radius:14px;
-}
-
