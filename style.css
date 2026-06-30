@@ -1,0 +1,940 @@
+/* =====================================================
+   RAMNAD SITE MANAGEMENT v1.0
+   STYLE.CSS (PART 1)
+===================================================== */
+
+/* ------------------------
+   GOOGLE FONT
+-------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ------------------------
+   RESET
+-------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+}
+
+/* ------------------------
+   MAP
+-------------------------*/
+
+#map{
+    position:absolute;
+    inset:0;
+    z-index:1;
+}
+
+/* ------------------------
+   SIDEBAR
+-------------------------*/
+
+#sidebar{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:360px;
+    height:100%;
+
+    background:#ffffff;
+
+    z-index:1200;
+
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:
+    4px 0 20px rgba(0,0,0,.12);
+
+    transition:.35s ease;
+
+    overflow:hidden;
+
+}
+
+#sidebar.closed{
+
+    transform:translateX(-100%);
+
+}
+
+/* ------------------------
+   HEADER
+-------------------------*/
+
+.sidebar-header{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    padding:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.logo i{
+
+    font-size:34px;
+
+}
+
+.logo h2{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+.logo p{
+
+    font-size:13px;
+
+    opacity:.85;
+
+}
+
+#closeSidebar{
+
+    border:none;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#closeSidebar:hover{
+
+    background:white;
+
+    color:#0d6efd;
+
+}
+
+/* ------------------------
+   SEARCH
+-------------------------*/
+
+.search-container{
+
+    padding:16px;
+
+    position:relative;
+
+    background:#fff;
+
+}
+
+.search-container input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:#eef2f7;
+
+    padding:14px 50px 14px 18px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.search-container input:focus{
+
+    background:#fff;
+
+    box-shadow:
+
+    0 0 0 2px #0d6efd;
+
+}
+
+.search-container i{
+
+    position:absolute;
+
+    right:32px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#666;
+
+}
+
+/* ------------------------
+SITE COUNT
+-------------------------*/
+
+#siteCount{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+    color:#666;
+
+    background:#f8f9fb;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+/* ------------------------
+SITE LIST
+-------------------------*/
+
+#siteList{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    background:#fafafa;
+
+}
+
+/* Scrollbar */
+
+#siteList::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+#siteList::-webkit-scrollbar-thumb{
+
+    background:#b9c4d0;
+
+    border-radius:20px;
+
+}
+
+#siteList::-webkit-scrollbar-track{
+
+    background:#f2f2f2;
+
+}
+
+/* ------------------------
+SITE CARD
+-------------------------*/
+
+.site-card{
+
+    display:flex;
+
+    gap:14px;
+
+    padding:15px;
+
+    margin:10px;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    border:1px solid transparent;
+
+    align-items:flex-start;
+
+}
+
+.site-card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#0d6efd;
+
+    box-shadow:
+
+    0 10px 18px rgba(0,0,0,.08);
+
+}
+
+.site-number{
+
+    min-width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:600;
+
+    font-size:17px;
+
+}
+
+.site-content{
+
+    flex:1;
+
+}
+
+.site-name{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#222;
+
+    margin-bottom:5px;
+
+}
+
+.site-village{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.site-card.active{
+
+    background:#eaf3ff;
+
+    border-color:#0d6efd;
+
+}
+
+/* ------------------------
+MENU BUTTON
+-------------------------*/
+
+#menuButton{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    z-index:1500;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 6px 16px rgba(0,0,0,.18);
+
+    transition:.25s;
+
+}
+
+#menuButton:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ------------------------
+FLOATING BUTTONS
+-------------------------*/
+
+#floatingButtons{
+
+    position:absolute;
+
+    right:18px;
+
+    bottom:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:1500;
+
+}
+
+#floatingButtons button{
+
+    width:54px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    box-shadow:
+
+    0 6px 18px rgba(0,0,0,.18);
+
+    transition:.25s;
+
+}
+
+#floatingButtons button:hover{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}
+
+/* ------------------------
+BOTTOM INFO CARD
+-------------------------*/
+
+#infoCard{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:18px;
+
+    width:420px;
+
+    max-width:92%;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:
+
+    0 12px 26px rgba(0,0,0,.18);
+
+    z-index:1400;
+
+}
+
+#infoTitle{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#222;
+
+    margin-bottom:6px;
+
+}
+
+#infoBody{
+
+    font-size:14px;
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+/* =====================================================
+   RAMNAD SITE MANAGEMENT v1.0
+   STYLE.CSS (PART 2 - COMPLETE)
+===================================================== */
+
+/* ------------------------
+   LEAFLET POPUP
+-------------------------*/
+
+.leaflet-popup-content-wrapper{
+    border-radius:16px;
+    padding:4px;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.leaflet-popup-content{
+    margin:14px;
+    font-family:'Poppins',sans-serif;
+}
+
+.leaflet-popup-content h3{
+    font-size:17px;
+    margin-bottom:10px;
+    color:#0d6efd;
+}
+
+.leaflet-popup-content p{
+    margin:6px 0;
+    font-size:14px;
+    color:#555;
+}
+
+.leaflet-popup-tip{
+    background:#fff;
+}
+
+/* ------------------------
+   CUSTOM MARKER
+-------------------------*/
+
+.custom-marker{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#0d6efd;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    font-size:14px;
+    border:3px solid #fff;
+    box-shadow:0 6px 12px rgba(0,0,0,.25);
+    transition:.25s;
+}
+
+.custom-marker:hover{
+    transform:scale(1.15);
+}
+
+.marker-selected{
+    background:#ff5722;
+    animation:pulseMarker 1.5s infinite;
+}
+
+@keyframes pulseMarker{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,87,34,.6);
+    }
+
+    70%{
+        transform:scale(1.1);
+        box-shadow:0 0 0 14px rgba(255,87,34,0);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* ------------------------
+   LOADING
+-------------------------*/
+
+.loading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    color:#666;
+    font-size:15px;
+}
+
+.spinner{
+    width:28px;
+    height:28px;
+    border:4px solid #ddd;
+    border-top-color:#0d6efd;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+    margin-right:12px;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ------------------------
+   BUTTON ACTIVE
+-------------------------*/
+
+button.active{
+    background:#0d6efd !important;
+    color:#fff !important;
+}
+
+/* ------------------------
+   SEARCH HIGHLIGHT
+-------------------------*/
+
+.highlight{
+    background:#fff3cd;
+}
+
+/* ------------------------
+   FADE ANIMATION
+-------------------------*/
+
+.fade-in{
+    animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ------------------------
+   ZOOM ANIMATION
+-------------------------*/
+
+.zoom-in{
+    animation:zoomIn .3s ease;
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        transform:scale(.8);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+/* ------------------------
+   CARD HOVER
+-------------------------*/
+
+.site-card:active{
+    transform:scale(.98);
+}
+
+/* ------------------------
+   INPUT PLACEHOLDER
+-------------------------*/
+
+input::placeholder{
+    color:#999;
+}
+
+/* ------------------------
+   LEAFLET CONTROLS
+-------------------------*/
+
+.leaflet-control-zoom{
+    border:none !important;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.leaflet-control-zoom a{
+    width:34px !important;
+    height:34px !important;
+    line-height:34px !important;
+    font-size:18px !important;
+}
+
+/* ------------------------
+   ROUTE BUTTON STYLE
+-------------------------*/
+
+.route-btn{
+    margin-top:12px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#0d6efd;
+    color:#fff;
+    cursor:pointer;
+    font-size:14px;
+    transition:.25s;
+}
+
+.route-btn:hover{
+    background:#0a58ca;
+}
+
+/* ------------------------
+   MEASURE MODE
+-------------------------*/
+
+.measure-active{
+    cursor:crosshair !important;
+}
+
+/* ------------------------
+   RESPONSIVE
+-------------------------*/
+
+@media(max-width:991px){
+
+    #sidebar{
+
+        width:320px;
+
+    }
+
+    #infoCard{
+
+        width:92%;
+
+    }
+
+}
+
+/* ------------------------
+   MOBILE
+-------------------------*/
+
+@media(max-width:768px){
+
+    #sidebar{
+
+        width:100%;
+
+    }
+
+    #menuButton{
+
+        top:15px;
+        left:15px;
+
+    }
+
+    #floatingButtons{
+
+        right:14px;
+        bottom:110px;
+
+    }
+
+    #floatingButtons button{
+
+        width:50px;
+        height:50px;
+
+    }
+
+    .site-card{
+
+        margin:8px;
+
+    }
+
+    .site-number{
+
+        width:42px;
+        height:42px;
+        min-width:42px;
+
+        font-size:15px;
+
+    }
+
+    #infoCard{
+
+        bottom:10px;
+        border-radius:16px;
+
+    }
+
+}
+
+/* ------------------------
+   SMALL MOBILE
+-------------------------*/
+
+@media(max-width:480px){
+
+    .logo h2{
+
+        font-size:18px;
+
+    }
+
+    .logo p{
+
+        font-size:12px;
+
+    }
+
+    .search-container{
+
+        padding:12px;
+
+    }
+
+    .search-container input{
+
+        font-size:14px;
+
+    }
+
+    .site-name{
+
+        font-size:15px;
+
+    }
+
+    .site-village{
+
+        font-size:13px;
+
+    }
+
+    #infoTitle{
+
+        font-size:16px;
+
+    }
+
+    #infoBody{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ------------------------
+   DESKTOP LARGE
+-------------------------*/
+
+@media(min-width:1400px){
+
+    #sidebar{
+
+        width:390px;
+
+    }
+
+}
+
+/* ------------------------
+   UTILITIES
+-------------------------*/
+
+.hidden{
+    display:none !important;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.mt-10{
+    margin-top:10px;
+}
+
+.mt-15{
+    margin-top:15px;
+}
+
+.mb-10{
+    margin-bottom:10px;
+}
+
+.w-100{
+    width:100%;
+}
+
+.shadow{
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.rounded{
+    border-radius:14px;
+}
+
