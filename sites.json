@@ -1,0 +1,397 @@
+[
+  {
+    "id": 1,
+    "name": "Mudimannarkottai (15 × 12 Area)",
+    "lat": 9.422472,
+    "lng": 78.224417
+  },
+  {
+    "id": 2,
+    "name": "KM Kottai",
+    "lat": 9.426500,
+    "lng": 78.244556
+  },
+  {
+    "id": 3,
+    "name": "Neeravi",
+    "lat": 9.422333,
+    "lng": 78.273778
+  },
+  {
+    "id": 4,
+    "name": "Melaramanadhi",
+    "lat": 9.412611,
+    "lng": 78.290611
+  },
+  {
+    "id": 5,
+    "name": "Sadaienthal Panchayat, Kumudhi Ondriyam",
+    "lat": 9.427639,
+    "lng": 78.425472
+  },
+  {
+    "id": 6,
+    "name": "Pakkuvetti",
+    "lat": 9.374861,
+    "lng": 78.415389
+  },
+  {
+    "id": 7,
+    "name": "Kollangulam",
+    "lat": 9.370444,
+    "lng": 78.451278
+  },
+  {
+    "id": 8,
+    "name": "Pulvaikulam",
+    "lat": 9.366444,
+    "lng": 78.461944
+  },
+  {
+    "id": 9,
+    "name": "Peterpuram (Pulvoikulam)",
+    "lat": 9.355139,
+    "lng": 78.452889
+  },
+  {
+    "id": 10,
+    "name": "Anaiyur (Periyur)",
+    "lat": 9.360722,
+    "lng": 78.413278
+  },
+  {
+    "id": 11,
+    "name": "O-Karisalkulam Ooratchi",
+    "lat": 9.308194,
+    "lng": 78.392972
+  },
+  {
+    "id": 12,
+    "name": "Vannankulam (O. Karisalkulam)",
+    "lat": 9.301417,
+    "lng": 78.376694
+  },
+  {
+    "id": 13,
+    "name": "Pammanendal (Melamavilangai)",
+    "lat": 9.274000,
+    "lng": 78.357056
+  },
+  {
+    "id": 14,
+    "name": "Sirukudi",
+    "lat": 9.263417,
+    "lng": 78.525194
+  },
+  {
+    "id": 15,
+    "name": "Orivayal (Vurvel)",
+    "lat": 9.241917,
+    "lng": 78.551389
+  },
+  {
+    "id": 16,
+    "name": "P-Usalankulam",
+    "lat": 9.255083,
+    "lng": 78.587889
+  },
+  {
+    "id": 17,
+    "name": "Kamakshipuram",
+    "lat": 9.312528,
+    "lng": 78.586778
+  },
+  {
+    "id": 18,
+    "name": "Marudhakam",
+    "lat": 9.310444,
+    "lng": 78.597778
+  },
+  {
+    "id": 19,
+    "name": "Manallur",
+    "lat": 9.422972,
+    "lng": 78.472361
+  },
+  {
+    "id": 20,
+    "name": "Melapanakulam",
+    "lat": 9.409056,
+    "lng": 78.482611
+  }
+  ,
+{
+  "id": 21,
+  "name": "Anaiseri (Annacheri)",
+  "village": "Anaiseri",
+  "lat": 9.414611,
+  "lng": 78.499972
+},
+{
+  "id": 22,
+  "name": "Keela Kulam",
+  "village": "Keela Kulam",
+  "lat": 9.436056,
+  "lng": 78.494028
+},
+{
+  "id": 23,
+  "name": "Sampakulam",
+  "village": "Sampakulam",
+  "lat": 9.444250,
+  "lng": 78.551944
+},
+{
+  "id": 24,
+  "name": "Mahindi",
+  "village": "Mahindi",
+  "lat": 9.415250,
+  "lng": 78.575111
+},
+{
+  "id": 25,
+  "name": "Alaganur",
+  "village": "Alaganur",
+  "lat": 9.405472,
+  "lng": 78.600167
+},
+{
+  "id": 26,
+  "name": "Sempakudi",
+  "village": "Sempakudi",
+  "lat": 9.398417,
+  "lng": 78.637306
+},
+{
+  "id": 27,
+  "name": "Soosaiyappar Pathi Village",
+  "village": "Soosaiyappar Pathi",
+  "lat": 9.402167,
+  "lng": 78.636361
+},
+{
+  "id": 28,
+  "name": "Muthu Vijayapram",
+  "village": "Muthu Vijayapram",
+  "lat": 9.395500,
+  "lng": 78.626167
+},
+{
+  "id": 29,
+  "name": "Kilavaneri",
+  "village": "Kilavaneri",
+  "lat": 9.362722,
+  "lng": 78.606167
+},
+{
+  "id": 30,
+  "name": "Chinnakaiyagam",
+  "village": "Chinnakaiyagam",
+  "lat": 9.344111,
+  "lng": 78.612639
+},
+{
+  "id": 31,
+  "name": "Theriruveli",
+  "village": "Theriruveli",
+  "lat": 9.319444,
+  "lng": 78.624722
+},
+{
+  "id": 32,
+  "name": "Sengarpadai",
+  "village": "Sengarpadai",
+  "lat": 9.348639,
+  "lng": 78.657222
+},
+{
+  "id": 33,
+  "name": "Valanadu",
+  "village": "Valanadu",
+  "lat": 9.351611,
+  "lng": 78.661333
+},
+{
+  "id": 34,
+  "name": "Pokkanarendal",
+  "village": "Pokkanarendal",
+  "lat": 9.365361,
+  "lng": 78.636417
+},
+{
+  "id": 35,
+  "name": "Nerinchipatti",
+  "village": "Nerinchipatti",
+  "lat": 9.297611,
+  "lng": 78.430167
+},
+{
+  "id": 36,
+  "name": "Kovilangulam",
+  "village": "Kovilangulam",
+  "lat": 9.280972,
+  "lng": 78.415278
+},
+{
+  "id": 37,
+  "name": "Erumaikulam",
+  "village": "Erumaikulam",
+  "lat": 9.255167,
+  "lng": 78.407694
+},
+{
+  "id": 38,
+  "name": "Pudhukulam",
+  "village": "Pudhukulam",
+  "lat": 9.233444,
+  "lng": 78.400056
+},
+{
+  "id": 39,
+  "name": "Perunali",
+  "village": "Perunali",
+  "lat": 9.238361,
+  "lng": 78.320417
+},
+{
+  "id": 40,
+  "name": "Perunali Indira Colony",
+  "village": "Perunali",
+  "lat": 9.239417,
+  "lng": 78.316500
+}
+,
+{
+  "id": 41,
+  "name": "Kumarapuram (Pappareddiyapatti)",
+  "village": "Kumarapuram",
+  "lat": 9.230778,
+  "lng": 78.312889
+},
+{
+  "id": 42,
+  "name": "Vellakulam – Kamudi",
+  "village": "Vellakulam",
+  "lat": 9.209778,
+  "lng": 78.344167
+},
+{
+  "id": 43,
+  "name": "Kadamangalam",
+  "village": "Kadamangalam",
+  "lat": 9.217361,
+  "lng": 78.365278
+},
+{
+  "id": 44,
+  "name": "Tharaikudi",
+  "village": "Tharaikudi",
+  "lat": 9.159333,
+  "lng": 78.372806
+},
+{
+  "id": 45,
+  "name": "RC Puram",
+  "village": "RC Puram",
+  "lat": 9.160806,
+  "lng": 78.378361
+},
+{
+  "id": 46,
+  "name": "Vennirvoikkal",
+  "village": "Vennirvoikkal",
+  "lat": 9.373472,
+  "lng": 78.537917
+},
+{
+  "id": 47,
+  "name": "Kilapaniadi",
+  "village": "Kilapaniadi",
+  "lat": 9.368722,
+  "lng": 78.542194
+},
+{
+  "id": 48,
+  "name": "Paruthikulam",
+  "village": "Paruthikulam",
+  "lat": 9.394417,
+  "lng": 78.519250
+},
+{
+  "id": 49,
+  "name": "Parukkaikudi",
+  "village": "Parukkaikudi",
+  "lat": 9.382972,
+  "lng": 78.524111
+},
+{
+  "id": 50,
+  "name": "Keelathooval",
+  "village": "Keelathooval",
+  "lat": 9.417528,
+  "lng": 78.542778
+},
+{
+  "id": 51,
+  "name": "Suvathan",
+  "village": "Suvathan",
+  "lat": 9.430611,
+  "lng": 78.592000
+},
+{
+  "id": 52,
+  "name": "Posukkudi",
+  "village": "Posukkudi",
+  "lat": 9.389000,
+  "lng": 78.584361
+},
+{
+  "id": 53,
+  "name": "Puliyankudi",
+  "village": "Puliyankudi",
+  "lat": 9.356750,
+  "lng": 78.565917
+},
+{
+  "id": 54,
+  "name": "South Kakkoor",
+  "village": "South Kakkoor",
+  "lat": 9.345528,
+  "lng": 78.563306
+},
+{
+  "id": 55,
+  "name": "Kakkoor Main",
+  "village": "Kakkoor",
+  "lat": 9.346667,
+  "lng": 78.572083
+},
+{
+  "id": 56,
+  "name": "Karumal",
+  "village": "Karumal",
+  "lat": 9.332500,
+  "lng": 78.595139
+},
+{
+  "id": 57,
+  "name": "Kumarakurichi",
+  "village": "Kumarakurichi",
+  "lat": 9.330611,
+  "lng": 78.584194
+},
+{
+  "id": 58,
+  "name": "Oruvanendal - 1",
+  "village": "Oruvanendal",
+  "lat": 9.282169,
+  "lng": 78.476752
+},
+{
+  "id": 59,
+  "name": "Oruvanendal - 2",
+  "village": "Oruvanendal",
+  "lat": 9.282115,
+  "lng": 78.476718
+}
+]
